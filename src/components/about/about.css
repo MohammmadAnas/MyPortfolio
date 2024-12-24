@@ -1,0 +1,244 @@
+.about__container {
+  grid-template-columns: 3fr 9fr;
+  column-gap: 1.875rem;
+}
+
+.about__data {
+  padding: 1.875rem;
+  background-color: var(--container-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  /* grid-template-columns: repeat(2, 1fr); */
+  column-gap: 1.875rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.about__data::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid var(--container-color);
+  position: absolute;
+  left: -0.93rem;
+  top: 20%;
+}
+
+.about__description {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.about__skills {
+  row-gap: 1.25rem;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.skills_name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills_number {
+  line-height: 1.2;
+}
+
+.skills__bar,
+.skills__percentage {
+  height: 7px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar {
+  background-color: #f1f1f1;
+}
+
+.skills__percentage {
+  display: block;
+}
+
+.skills__bar .development {
+  width: 90%;
+  background-color: rgb(255, 209, 92);
+}
+
+.ui__design {
+  width: 80%;
+  background-color: rgb(255, 76, 96);
+}
+
+.photography {
+  width: 60%;
+  background-color: rgb(108, 108, 299);
+}
+
+.about__boxes {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.875rem;
+  margin-top: 4.35rem;
+}
+
+.about__box {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.about__icon {
+  font-size: var(--h1-font-size);
+  color: #dedeea;
+}
+
+.about__title {
+  font-size: 1.875rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 720px;
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+
+  .about__data::before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    left: 49%;
+    top: -20px;
+  }
+
+  .about__img {
+    justify-self: center;
+  }
+
+  .about__box {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    text-align: center;
+  }
+  .skill-box{
+    padding-left: 0px !important; 
+    padding-right: 0px !important; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about__container {
+    grid-template-columns: 350px;
+  }
+
+  .about__data::before {
+    left: 47%;
+  }
+
+  .about__data {
+    grid-template-columns: 1fr;
+    row-gap: 1.875rem;
+  }
+
+  .about__boxes {
+    grid-template-columns: repeat(2, 150px);
+    row-gap: 1.5rem;
+    justify-content: center;
+  }
+  .skill-box{
+    padding-left: 0px !important; 
+    padding-right: 0px !important; 
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about__container {
+    grid-template-columns: 320px;
+  }
+  .scroll-button.left {
+    margin-right: 0px;
+  }
+  .scroll-button.right {
+    margin-left: 0px;
+  }
+  .skill-box{
+    padding-left: 0px !important; 
+    padding-right: 0px !important; 
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+
+  .about__boxes {
+    grid-template-columns: 1fr;
+  }
+  .skill-box{
+    padding-left: 0px !important; 
+    padding-right: 0px !important; 
+  }
+}
+
+.about-box-container {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.app::-webkit-scrollbar {
+  display: none; 
+}
+
+.scroll-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 35px;
+  cursor: pointer;
+  min-height: 43px;
+  min-width: 43px;
+  opacity: 1;
+  outline: 0;
+  justify-content: center;
+  align-items: center; /* Add this */
+  display: flex; /* Add this */
+  transition: all 0.5s;
+  z-index: 1000;
+}
+.scroll-button.left {
+  margin-right: 10px;
+}
+.scroll-button.right {
+  margin-left: 10px;
+}
+
+.skill-box{
+    /* background: #151515; */
+    padding-top: 7rem;
+    border-radius: 64px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.skill-box h2{
+    font-size: var(--h1-font-size);
+}
+
+.skill-box p{
+    font-size: 18px;
+    letter-spacing: .8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px;
+}

@@ -1,0 +1,73 @@
+:root{
+    --color1: #12c2e9;
+    --color2: #c471ed;
+    --color3: #f64f59;
+}
+
+.box{
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+@media screen and (max-width: 1115px) {
+    .box{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+@media screen and (max-width: 1065px) {
+    .box{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .box{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .box{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .box{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .box{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+.circle-background {
+    fill: none;
+    stroke: #ddd;
+}
+
+.circle-progress {
+    fill:none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.circle-text {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.circle-title{
+    font-size: 1.25rem;
+    color: black;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    margin-top: 0;
+    text-align: center;
+}
